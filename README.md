@@ -2,7 +2,7 @@
 
 Por favor leiam este documento do começo ao fim, com muita atenção.
 O intuito deste teste é avaliar seus conhecimentos técnicos, para ser mais específico em Ruby on Rails.
-O teste consiste em parsear [este arquivo de texto(CNAB)](www.google.com.br) e salvar suas informações(transações financeiras) em uma base de dados a critério do candidato.
+O teste consiste em parsear [este arquivo de texto(CNAB)](https://github.com/ByCodersTec/desafio-ruby-on-rails/blob/master/CNAB.txt) e salvar suas informações(transações financeiras) em uma base de dados a critério do candidato.
 Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quiser, porém normalmente você não deve precisar de mais do que algumas horas.
 
 # Instruções de entrega do desafio
@@ -16,7 +16,7 @@ Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quise
 Você recebeu um arquivo CNAB com os dados das movimentações finanaceira de várias lojas.
 Precisamos criar uma maneira para que estes dados sejam importados para um banco de dados.
 
-Sua tarefa é criar uma interface web que aceite upload do [arquivo CNAB](www.google.com.br), normalize os dados e armazene-os em um banco de dados relacional e exiba essas informações em tela.
+Sua tarefa é criar uma interface web que aceite upload do [arquivo CNAB](https://github.com/ByCodersTec/desafio-ruby-on-rails/blob/master/CNAB.txt), normalize os dados e armazene-os em um banco de dados relacional e exiba essas informações em tela.
 
 **Sua aplicação web DEVE:**
 
