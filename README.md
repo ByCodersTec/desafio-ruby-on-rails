@@ -1,4 +1,4 @@
-# Desafio programação - para vaga Back-end
+# Desafio programação - para vaga desenvolvedor Ruby on Rails
 
 Por favor leiam este documento do começo ao fim, com muita atenção.
 O intuito deste teste é avaliar seus conhecimentos técnicos, para ser mais específico em Ruby on Rails.
