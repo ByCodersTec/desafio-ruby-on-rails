@@ -38,7 +38,7 @@ Sua tarefa é criar uma interface web que aceite upload do [arquivo CNAB](https:
 
 1. Lidar com autenticação ou autorização (pontos extras se ela fizer, mais pontos extras se a autenticação for feita via OAuth).
 2. Ser escrita usando algum framework específico (mas não há nada errado em usá-los também, use o que achar melhor).
-3. Será um diferencial se a aplicação disponibilizar a documentação da api.(Será um diferencial e pontos extras se ela fizer)
+3. Documentação da api.(Será um diferencial e pontos extras se fizer)
 
 # Documentação do CNAB
 
