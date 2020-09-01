@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>CNAB</h1>
+  <%= form_tag({action: :create}, multipart: true) do %>
+    <div class="row">
+      <div class="col-25">
+        <%= label_tag 'Select CNAB.txt' %>
+      </div>
+      <div class="col-75">
+        <%= file_field_tag :cnab_file, accept: 'text/txt' %>
+      </div>
+    </div>
+    <div class="row">
+      <%= button_tag "Upload", type: :submit %>
+    </div>
+    <% flash.each do |type, message| %>
+      <div class='<%= "notification #{type}" %>'>
+        <span>
+          <%= message %>
+        </span>
+      </div>
+    <% end %>
+  <% end %>
+</div>  

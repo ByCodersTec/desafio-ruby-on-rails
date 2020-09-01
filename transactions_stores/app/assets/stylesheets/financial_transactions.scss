@@ -1,0 +1,111 @@
+$text-color:                  #3f3f3f;
+$body-background-color:       #f4f4f4;
+$container-background-color:  #ffffff;
+
+$error-color:                 #e60000;
+$primary-color:               #00f0a2;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  color: $text-color;
+  font-family: Sans-serif;
+  background-color: $body-background-color;
+}
+
+h1 {
+  font-size: 22px;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  padding: 12px 12px 12px 0;
+}
+
+input[type=file] {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: $body-background-color;
+}
+
+button[type=submit] {
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: $text-color;
+  border: 2px solid $primary-color;
+  background-color: $primary-color;
+}
+
+button[type=submit]:hover {
+  background-color: transparent;
+  border: 2px solid $primary-color;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: $container-background-color;
+}
+
+.col-25 {
+  width: 25%;
+  float: left;
+  margin-top: 10px;
+}
+
+.col-75 {
+  width: 75%;
+  float: left;
+  margin-top: 10px;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.notification {
+  padding: 10px;
+  text-align: center;
+}
+
+.notification.info span {
+  color: darken($primary-color, 25%);
+}
+
+.notification.error span  {
+  color: $error-color;
+}
+
+/* 
+ * Responsive
+ */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
