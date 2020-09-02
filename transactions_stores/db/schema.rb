@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_09_01_074012) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "recipients", force: :cascade do |t|
     t.string "cpf"
     t.string "card"
@@ -34,11 +37,11 @@ ActiveRecord::Schema.define(version: 2020_09_01_074012) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.integer "transaction_type_id", null: false
+    t.bigint "transaction_type_id", null: false
     t.datetime "occurred_in"
     t.decimal "amount"
-    t.integer "recipient_id", null: false
-    t.integer "store_id", null: false
+    t.bigint "recipient_id", null: false
+    t.bigint "store_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recipient_id"], name: "index_transactions_on_recipient_id"

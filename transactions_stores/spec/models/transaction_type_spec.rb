@@ -9,4 +9,10 @@ RSpec.describe TransactionType, type: :model do
   describe 'associations' do
     it { should have_many(:transactions) }
   end
+
+  describe 'enums' do
+    describe 'origin' do
+      it { should define_enum_for(:origin).with_values([:in, :out]) }
+    end
+  end
 end
