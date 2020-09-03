@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe ImportCnabDataJob, type: :job do
-  before {
+  before do
     ActiveJob::Base.queue_adapter = :test
 
     Transaction.destroy_all
     TransactionType.create(id: 1, description: 'Débito', origin: 0)
-  }
+  end
 
   describe 'perform later job added to queue' do
     it { expect { ImportCnabDataJob.perform_later('spec/fixtures/files', 'cnab.txt') }.to enqueue_job }

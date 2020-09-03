@@ -3,7 +3,7 @@ class FinancialTransactionsController < ApplicationController
     begin
       file = FinancialTransactionsHelper.upload(params[:cnab_file])
 
-      ImportCnabDataJob.perform_later(file.path, params[:cnab_file].original_filename)
+      ImportCnabDataJob.perform_now('tmp/storage', params[:cnab_file].original_filename)
 
       flash.now[:info] = t('notifications.upload.success')
       render :new

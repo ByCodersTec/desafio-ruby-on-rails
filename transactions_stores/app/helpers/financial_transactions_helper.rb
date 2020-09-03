@@ -34,11 +34,11 @@ module FinancialTransactionsHelper
     store = Store.find_or_create_by(name: transaction[:store_name], 
                                     owner: transaction[:store_owner])
 
-    transaction = Transaction.create(store: store,
-                                     recipient: recipient,
-                                     amount: transaction[:amount],
-                                     transaction_type: transaction_type,
-                                     occurred_in: transaction[:occurred_in])
+    transaction = Transaction.find_or_create_by(store: store,
+                                                recipient: recipient,
+                                                amount: transaction[:amount],
+                                                transaction_type: transaction_type,
+                                                occurred_in: transaction[:occurred_in])
   end
 
   def self.split(line)
