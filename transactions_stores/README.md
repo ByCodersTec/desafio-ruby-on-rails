@@ -1,24 +1,53 @@
-# README
+# Transactions Store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Descrição
 
-Things you may want to cover:
+Este projeto permite o upload de um arquivo de texto (.txt) contendo as informações de transações bancárias.
 
-* Ruby version
+Essas informações são salvas no banco de dados e disponibilizadas através de um endpoint (`v1/financial_transactions?store_name=[:store_name]`) na API.
 
-* System dependencies
+## Instalação
 
-* Configuration
+Para executar o projeto é preciso possuir:
 
-* Database creation
+- Ruby versão `2.6.3`
+- Rails versão `6.0.3.2`
 
-* Database initialization
+Para instalar as dependências, acesse a pasta do projeto (`transactions_stores`) e execute o comando:
 
-* How to run the test suite
+```
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Execução
 
-* Deployment instructions
+Para iniciar o projeto execute o comando:
 
-* ...
+```
+rails s
+```
+
+## Acesso
+
+Acesse a página de upload através do browser no endereço:
+
+http://127.0.0.1:3000/financial_transactions/new
+
+Acesse a API pelo endereço:
+
+http://127.0.0.1:3000/v1/financial_transactions
+
+## Testes
+
+Para rodar os testes execute o comando:
+
+```
+rspec spec
+```
+
+Para visualizar a cobertura dos testes abra o arquivo `coverage/index.html` no browser. É possível abri-lo com o comando:
+
+```
+open coverage/index.html
+```
+
